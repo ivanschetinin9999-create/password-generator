@@ -13,7 +13,7 @@ def calculate_entropy(password):
   if any(c in string.ascii_uppercase for c in password): n += 26
   if any(c in string.digits for c in password): n += 10
   if any(c in string.punctuation for c in password): n += 32
-return len(password) * math.log2(n) if n > 0 else 0
+  return len(password) * math.log2(n) if n > 0 else 0
 # Боковая панель с выбором режима
 mode = st.sidebar.selectbox("Выберите действие:", ["Генерация", "Проверка моего пароля"])
 if mode == "Генерация":
