@@ -37,9 +37,9 @@ else:
   if user_pwd:
     entropy = calculate_entropy(user_pwd)
     st.write(f"Стойкость: **{entropy:.2f} бит**")
-    if entropy < 40:
-      st.error("Слабый пароль")
-    elif entropy < 60:
-      st.warning("Средняя надежность")
-    else: 
-      st.success("Высокая надежность")
+  if entropy < 40:
+    st.error("Слабый пароль")
+  elif entropy < 60:
+    st.warning("Средняя надежность")
+  else: 
+    st.success("Высокая надежность")
